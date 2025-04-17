@@ -1,0 +1,10 @@
+# Ignore Python venv
+venv/
+__pycache__/
+*.pyc
+
+# Ignore SQLite database
+ecommerce.db
+
+# Ignore system files
+.DS_Store
