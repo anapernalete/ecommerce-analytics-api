@@ -1,6 +1,16 @@
+import os
 from fastapi import FastAPI
 from fastapi import Query
+import pandas as pd
 import sqlite3
+
+if not os.path.exists("ecommerce.db"):
+    df = pd.read_csv("data.csv", encoding="ISO-8859-1")
+    df = df.dropna(subset=["CustomerID", "InvoiceNo", "InvoiceDate", "StockCode"])
+    df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
+    conn = sqlite3.connect("ecommerce.db")
+    df.to_sql("transactions", conn, if_exists="replace", index=False)
+    conn.close()
 
 app = FastAPI()
 
