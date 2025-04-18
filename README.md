@@ -33,7 +33,7 @@ The goal is to provide clean, reusable endpoints for common e-commerce analytics
 An interactive dashboard built on top of the FastAPI backend. It fetches data from the deployed API and visualizes it with Streamlit.
 
 - ✅ Live Dashboard:  
-  [`https://your-username.streamlit.app`](https://your-username.streamlit.app)
+  [`https://ecommerce-analytics-api.streamlit.app`](https://your-username.streamlit.app)
 
 📊 Current Dashboard Views
 - Top Customers
