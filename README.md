@@ -49,4 +49,4 @@ Line chart of daily revenue with a filterable date range
 - Hosting: Render (API) + Streamlit Cloud (Dashboard)
 
 ## 📘 Dataset
-[`E-Commerce Data`](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
+[`Kaggle: E-Commerce Data`](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
