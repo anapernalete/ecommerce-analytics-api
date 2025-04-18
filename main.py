@@ -36,3 +36,7 @@ def top_products(limit: int = 10):
     with open("queries/top_products.sql") as f:
         query = f.read()
     return {"data": run_query(query, (limit))}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
