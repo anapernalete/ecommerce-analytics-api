@@ -1,3 +1,5 @@
+[![Deployed on Render](https://img.shields.io/badge/Render-Live-blue)](https://ecommerce-analytics-api.onrender.com)
+
 # 🛒 E-commerce Analytics API
 
 Full-stack e-commerce analytics tool built with **FastAPI** and **Streamlit**.  
@@ -16,36 +18,35 @@ The goal is to provide clean, reusable endpoints for common e-commerce analytics
 - 🌎 Sales by country
 - 📈 Daily revenue trends
 - 📦 Top-selling products
--  📊 Streamlit dashboard for visual insights
+- 📊 Streamlit dashboard for visual insights
 
 ## 📡 API Access
-- ✅ Currently runs locally at:
-  http://127.0.0.1:8000/docs
+- ✅ Live API (deployed on Render):  
+  [`https://ecommerce-analytics-api.onrender.com/docs`](https://ecommerce-analytics-api.onrender.com/docs)
+
+- ✅ Endpoints:
+  - `/top-customers`
+  - `/daily-sales?start=YYYY-MM-DD&end=YYYY-MM-DD`
+  - `/top-products?limit=10`
+
+## 🎨 Streamlit Dashboard
+An interactive dashboard built on top of the FastAPI backend. It fetches data from the deployed API and visualizes it with Streamlit.
+
+- ✅ Live Dashboard:  
+  [`https://your-username.streamlit.app`](https://your-username.streamlit.app)
+
+📊 Current Dashboard Views
+- Top Customers
+Bar chart + data table of the top 10 spenders
+
+- Daily Sales
+Line chart of daily revenue with a filterable date range
 
 ## 📊 Tech Stacks
 - Backend: Python, FastAPI, SQLite
 - Data Layer: Raw SQL
-- Frontend: Streamlit or React
-- Hosting: 
-
-## 🎨 Streamlit Dashboard
-Simple, interactive dashboard built on top of the FastAPI backend. It fetches data from the API endpoints and visualizes it with charts, tables, and filters.
-
-📊 Current Dashboard Views
-- Top Customers
-View the top 10 customers ranked by total revenue (bar chart + table)
-
-- Daily Sales
-Filter sales by date range and view total revenue over time (line chart)
-
-## 🔧 How to Run
-- Start the FastAPI server 
-  - uvicorn main:app --reload
-- Run the Streamlit app
-  - cd streamlit-dashboard 
-  - streamlit run app.py
-- Open browser at:
-  - http://localhost:8501
+- Frontend: Streamlit
+- Hosting: Render (API) + Streamlit Cloud (Dashboard)
 
 ## 📘 Dataset
-https://www.kaggle.com/datasets/carrie1/ecommerce-data
+[`https://www.kaggle.com/datasets/carrie1/ecommerce-data`](https://ecommerce-analytics-api.onrender.com/docs)
