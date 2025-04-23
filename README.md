@@ -1,52 +1,73 @@
 [![Deployed on Render](https://img.shields.io/badge/Render-Live-blue)](https://ecommerce-analytics-api.onrender.com)
 
-# 🛒 E-commerce Analytics API
+# 🛒 E-commerce Analytics API + Dashboard
 
-Full-stack e-commerce analytics tool built with **FastAPI** and **Streamlit**.  
-It uses an e-commerce transactions dataset to expose key business insights through:
+**A full-stack e-commerce analytics tool built with FastAPI + Streamlit + Machine Learning.**  
+It uses a real-world dataset of transactions to uncover business insights through SQL, clustering, and interactive dashboards.
 
-- A lightweight **FastAPI backend** with SQL-powered endpoints
-- An interactive **Streamlit dashboard** to explore and visualize the data
+---
 
-The backend handles all data processing through raw SQL queries on a SQLite database.
-The frontend consumes those endpoints to display charts, tables, and filters for key metrics like customer spending and daily revenue.
+## 🔧 Stack Overview
 
-The goal is to provide clean, reusable endpoints for common e-commerce analytics tasks, such as identifying top customers, tracking daile revenue, and evaluating sales by country or product.
+- ⚙️ Backend: **FastAPI** + **SQLite** + raw SQL queries
+- 🎨 Frontend: **Streamlit** (interactive dashboard)
+- 🤖 ML: **Customer Segmentation via KMeans**
+- ☁️ Hosting: **Render** (API) + **Streamlit Cloud** (dashboard)
+
+---
 
 ## 🚀 Features
+
 - 🔝 Top customers by total revenue
-- 🌎 Sales by country
-- 📈 Daily revenue trends
+- 📈 Daily revenue trends (with date filtering)
 - 📦 Top-selling products
+- 🌎 Sales by country *(coming soon)*
+- 🧠 **Customer Segmentation** using RFM + KMeans
 - 📊 Streamlit dashboard for visual insights
 
-## 📡 API Access
-- ✅ Live API (deployed on Render):  
-  [`https://ecommerce-analytics-api.onrender.com/docs`](https://ecommerce-analytics-api.onrender.com/docs)
+---
 
-- ✅ Endpoints:
-  - `/top-customers`
-  - `/daily-sales?start=YYYY-MM-DD&end=YYYY-MM-DD`
-  - `/top-products?limit=10`
+## 📡 API Access
+
+✅ Live API (deployed on Render):  
+🔗 [https://ecommerce-analytics-api.onrender.com/docs](https://ecommerce-analytics-api.onrender.com/docs)
+
+### Available Endpoints:
+
+- `/top-customers`
+- `/daily-sales?start=YYYY-MM-DD&end=YYYY-MM-DD`
+- `/top-products?limit=10`
+- `/customer-segment?customer_id=12345`
+
+---
 
 ## 🎨 Streamlit Dashboard
-An interactive dashboard built on top of the FastAPI backend. It fetches data from the deployed API and visualizes it with Streamlit.
 
-- ✅ Live Dashboard:  
-  [`https://ecommerce-analytics-api.streamlit.app`](https://ecommerce-analytics-api.streamlit.app)
+✅ Live App:  
+🔗 [https://ecommerce-analytics-api.streamlit.app](https://ecommerce-analytics-api.streamlit.app)
 
-📊 Current Dashboard Views
-- Top Customers
-Bar chart + data table of the top 10 spenders
+Interactive dashboard built on top of the FastAPI API. Powered by real-time data and machine learning.
 
-- Daily Sales
-Line chart of daily revenue with a filterable date range
+### 📊 Views Included:
 
-## 📊 Tech Stacks
-- Backend: Python, FastAPI, SQLite
-- Data Layer: Raw SQL
-- Frontend: Streamlit
-- Hosting: Render (API) + Streamlit Cloud (Dashboard)
+- **Top Customers** – bar chart + data table of top 10 spenders
+- **Daily Sales** – filterable line chart of daily revenue
+- **Customer Segmentation** – enter a customer ID to view:
+  - Recency, Frequency, Monetary value
+  - Assigned cluster (e.g., "Loyal", "At Risk", "High Value")
+
+---
 
 ## 📘 Dataset
-[`Kaggle: E-Commerce Data`](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
+
+📦 [Kaggle: E-Commerce Data](https://www.kaggle.com/datasets/carrie1/ecommerce-data)  
+UK-based online retail transaction dataset with product-level invoice data.
+
+---
+
+## Run Locally
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/ecommerce-analytics-api.git
+   cd ecommerce-analytics-api
